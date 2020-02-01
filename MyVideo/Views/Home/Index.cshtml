@@ -11,32 +11,39 @@
 <div class="row">
     <div class="col-md-4">
         <h2>E:/HD</h2>
-        <p>
+        <ol>
             @foreach (var item in ViewBag.Efiles)
             {
-                <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
-                <br />
+                <li>
+                    <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
+                    <br />
+                </li>
             }
-        </p>
+        </ol>
+
     </div>
     <div class="col-md-4">
         <h2>F:/电影</h2>
-        <p>
+        <ol>
             @foreach (var item in ViewBag.Ffiles)
             {
-                <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
-                <br />
+                <li>
+                    <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
+                    <br />
+                </li>
             }
-        </p>
+        </ol>
     </div>
     <div class="col-md-4">
         <h2>G:/电影</h2>
-        <p>
+        <ul>
             @foreach (var item in ViewBag.Gfiles)
             {
-                <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
-                <br />
+                <li>
+                    <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
+                    <br />
+                </li>
             }
-        </p>
+        </ul>
     </div>
 </div>
