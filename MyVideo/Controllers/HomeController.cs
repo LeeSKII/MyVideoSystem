@@ -13,15 +13,15 @@ namespace MyVideo.Controllers
         public ActionResult Index()
         {
             List<string> Efiles = new List<string>();
-            FileTools.GetFilesByPathAndExt(ref Efiles,@"E:\HD","*.mp4");
+            FileTools.GetFilesByPathAndExt(ref Efiles, @"E:\HD\[11]New", "*.mp4");
             ViewBag.Efiles = Efiles;
 
             List<string> Ffiles = new List<string>();
-            FileTools.GetFilesByPathAndExt(ref Ffiles, @"F:\电影", "*.mp4");
+            FileTools.GetFilesByPathAndExt(ref Ffiles, @"F:\电影\Movie\[11]New", "*.mp4");
             ViewBag.Ffiles = Ffiles;
 
             List<string> Gfiles = new List<string>();
-            FileTools.GetFilesByPathAndExt(ref Gfiles, @"G:\电影", "*.mp4");
+            FileTools.GetFilesByPathAndExt(ref Gfiles, @"G:\电影\Movie\[11]New", "*.mp4");
             ViewBag.Gfiles = Gfiles;
 
             return View();
@@ -33,9 +33,9 @@ namespace MyVideo.Controllers
 
             ViewBag.MovieName = id;
 
-            string physicEPath = @"E:\HD";
-            string physicFPath = @"F:\电影";
-            string physicGPath = @"G:\电影";
+            string physicEPath = @"E:\HD\[11]New";
+            string physicFPath = @"F:\电影\Movie\[11]New";
+            string physicGPath = @"G:\电影\Movie\[11]New";
 
             string movieNameE = string.Empty;
             FileTools.GetFileFullPathByfileNameAndParentPath(physicEPath, id, ref movieNameE);

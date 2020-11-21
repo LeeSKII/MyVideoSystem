@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+
+    账号：<input type="text" name="userName" value="" style="padding:5px;margin:10px"/>
+       <br />
+    密码：<input type="password" name="userPwd" value="" style="padding:5px;margin:10px"/>
+       <br />
+    <button onclick="Login()" style="padding:5px;margin:10px">提交</button>
+    <br />
+    <button onclick="Logoff()" style="padding:5px;margin:10px">退出登录</button>
+
+
+<script>   
+    function Login() {
+        let name = $("input[name='userName']").val();
+        let pwd = $("input[name='userPwd']").val();     
+        $.ajax({
+            url: "CheckUserInfo",
+            type: "post",
+            data: { name: name, pwd: pwd },
+            success: function () {
+                console.log("success");
+                location.href = "Jump";
+            },
+            error: function (msg) {               
+                console.log(msg);
+            }
+        });
+    }
+    function Logoff() {
+        $.ajax({
+            url: "Logoff",
+            type: "post",
+            success: function () {
+                alert("success");
+            },
+            error: function (msg) {
+                alert(msg);
+            }
+        });
+    }
+</script>

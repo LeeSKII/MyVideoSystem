@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using MyVideo.Code;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MyVideo
@@ -8,6 +9,7 @@ namespace MyVideo
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new Verify());
         }
     }
 }

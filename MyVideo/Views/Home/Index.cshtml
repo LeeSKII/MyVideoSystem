@@ -8,42 +8,45 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>E:/HD</h2>
-        <ol>
-            @foreach (var item in ViewBag.Efiles)
-            {
-                <li>
-                    <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
-                    <br />
-                </li>
-            }
-        </ol>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4">
+            <h2>E:</h2>
+            <ol>
+                @foreach (var item in ViewBag.Efiles)
+                {
+                    <li>
+                        <a class="text-warning" href="/Home/Movie/?id=@item">@item</a>
+                        <br />
+                    </li>
+                }
+            </ol>
 
-    </div>
-    <div class="col-md-4">
-        <h2>F:/电影</h2>
-        <ol>
-            @foreach (var item in ViewBag.Ffiles)
-            {
-                <li>
-                    <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
-                    <br />
-                </li>
-            }
-        </ol>
-    </div>
-    <div class="col-md-4">
-        <h2>G:/电影</h2>
-        <ul>
-            @foreach (var item in ViewBag.Gfiles)
-            {
-                <li>
-                    <a class="btn btn-default" href="/Home/Movie/?id=@item">@item</a>
-                    <br />
-                </li>
-            }
-        </ul>
+        </div>
+        <div class="col-xs-4">
+            <h2>F:</h2>
+            <ol>
+                @foreach (var item in ViewBag.Ffiles)
+                {
+                    <li>
+                        <a class="" href="/Home/Movie/?id=@item">@item</a>
+                        <br />
+                    </li>
+                }
+            </ol>
+        </div>
+        <div class="col-xs-4">
+            <h2>G:</h2>
+            <ol>
+                @foreach (var item in ViewBag.Gfiles)
+                {
+                    <li > 
+                        <a class="" href="/Home/Movie/?id=@item">@item</a>
+                        <br />
+                    </li>
+                }
+            </ol>
+        </div>
     </div>
 </div>
+
